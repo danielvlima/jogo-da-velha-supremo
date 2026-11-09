@@ -3,7 +3,7 @@ def criar_tabuleiro_grande():
   for i in range(9):
     tabuleiroPequeno = {
       "id": i,
-      "jogador": None,
+      "vencedor": None,
       "tabuleiro": [' '] * 9
     }
     tab.append(tabuleiroPequeno)
@@ -13,14 +13,14 @@ def criar_tabuleiro_grande():
   return tab
 
 def mostrar_tabuleiro(tab):
-    print('  1 | 2 | 3 || 4 | 5 | 6 || 7 | 8 | 9 ')
+    # print('  1 | 2 | 3 || 4 | 5 | 6 || 7 | 8 | 9 ')
     count = 0
 
     for bloco_tab in range(0, 9, 3):
         for sublinha in range(0, 9, 3):
             print(count + 1, end='')
             for i in range(3):
-                idx_tabuleiro = bloco_tab + i
+                # idx_tabuleiro = bloco_tab + i
                 casas = tab[idx_tabuleiro]["tabuleiro"][sublinha : sublinha + 3]
                 
                 print(' ' + ' | '.join(casas) + ' ', end='')
